@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "MSCustomTapGesture.h"
 @interface ViewController () 
 
 @property (weak,nonatomic) UITextView* textView;
@@ -27,13 +27,19 @@
     [self.view addSubview:textView];
     
     UIFont* font = [UIFont fontWithName:@"Arial" size:20];
-    textView.editable = false;
+    textView.editable = NO;
+    textView.selectable = NO;
     textView.font = font;
     
     self.textView = textView;
     self.textView.delegate = self;
     
     [self startTimer];
+    
+    MSCustomTapGesture* tap = [[MSCustomTapGesture alloc] initWithTarget:self action:@selector(handleTap:)];
+    [self.textView addGestureRecognizer:tap];
+    tap.delegate = self;
+
 }
 
 - (void) startTimer {
@@ -59,7 +65,7 @@
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    if (self.timer.valid == false) {
+    if (self.timer.valid == NO) {
 
         [self startTimer];
     }
@@ -67,15 +73,32 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     
-    if (self.timer.valid == false && decelerate == false) {
+    if (self.timer.valid == NO && decelerate == NO) {
         
         [self startTimer];
     }
 }
 
+-(void) handleTap:(MSCustomTapGesture*) sender {
+    
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        [self.timer invalidate];
+    }
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        [self startTimer];
+    }
+}
+
+- (BOOL)gestureRecognizer:(MSCustomTapGesture *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

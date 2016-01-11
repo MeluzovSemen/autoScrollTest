@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70856BEC1C43DEF9003A00E8 /* MSCustomTapGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 70856BEB1C43DEF9003A00E8 /* MSCustomTapGesture.m */; };
 		70C2A4221C43C8340037BDFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C2A4211C43C8340037BDFE /* main.m */; };
 		70C2A4251C43C8340037BDFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C2A4241C43C8340037BDFE /* AppDelegate.m */; };
 		70C2A4281C43C8340037BDFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C2A4271C43C8340037BDFE /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70856BEA1C43DEF9003A00E8 /* MSCustomTapGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCustomTapGesture.h; sourceTree = "<group>"; };
+		70856BEB1C43DEF9003A00E8 /* MSCustomTapGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCustomTapGesture.m; sourceTree = "<group>"; };
 		70C2A41D1C43C8340037BDFE /* AutoScrollTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoScrollTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70C2A4211C43C8340037BDFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		70C2A4231C43C8340037BDFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				70C2A42E1C43C8340037BDFE /* LaunchScreen.storyboard */,
 				70C2A4311C43C8340037BDFE /* Info.plist */,
 				70C2A4201C43C8340037BDFE /* Supporting Files */,
+				70856BEA1C43DEF9003A00E8 /* MSCustomTapGesture.h */,
+				70856BEB1C43DEF9003A00E8 /* MSCustomTapGesture.m */,
 			);
 			path = AutoScrollTest;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			files = (
 				70C2A4281C43C8340037BDFE /* ViewController.m in Sources */,
 				70C2A4251C43C8340037BDFE /* AppDelegate.m in Sources */,
+				70856BEC1C43DEF9003A00E8 /* MSCustomTapGesture.m in Sources */,
 				70C2A4221C43C8340037BDFE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +304,7 @@
 				70C2A4361C43C8340037BDFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
