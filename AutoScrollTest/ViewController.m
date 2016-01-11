@@ -60,7 +60,6 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     if (self.timer.valid == false) {
-        NSLog(@"ENDSCROLL");
 
         [self startTimer];
     }
@@ -69,7 +68,7 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     
     if (self.timer.valid == false && decelerate == false) {
-        NSLog(@"ENDDragging");
+        
         [self startTimer];
     }
 }
